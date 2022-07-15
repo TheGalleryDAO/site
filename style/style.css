@@ -25,7 +25,7 @@ body{
     width: 350px;
     min-width: 100%;
     max-width: 350px!important;
-    height: auto;
+    height: 350px;
   }
   .pilar  {
     max-width: 250px!important;
