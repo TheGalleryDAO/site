@@ -21,7 +21,7 @@ function between(min, max) {
 async function imageAnimation(){
     let logo = $("#tgdLogo")
     counter = counter > 10 ? 0:counter + 1
-    console.log(counter)
+    console.log("Hello")
         const size = {
             w:logo.width(),
             h:logo.height()
