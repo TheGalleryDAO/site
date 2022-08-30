@@ -22,10 +22,11 @@ body{
   }
   
   .logo{
-    width: 350px;
+    width: 300px;
     min-width: 100%;
-    max-width: 350px!important;
-    height: 350px;
+    max-width: 300px!important;
+    max-height: 300px!important;
+    height: 300px;
   }
   .pilar  {
     max-width: 250px!important;
@@ -38,3 +39,27 @@ body{
   .mt-10{
       margin-top: 10%;
   }
+  .glow, .glow:hover, .glow:active {
+    color: #abfe2c!important;
+    font-weight: bold;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 10px #abfe2c, 0 0 20px #abfe2c, 0 0 30px #018a36, 0 0 40px #018a36, 0 0 50px #018a36, 0 0 60px #018a36, 0 0 70px #018a36;
+    }
+    to {
+      text-shadow: 0 0 20px #abfe2c, 0 0 30px #00501e, 0 0 40px #00501e, 0 0 50px #00501e, 0 0 60px #00501e, 0 0 70px #00501e, 0 0 80px #00501e;
+    }
+  }
+  @-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 10px #abfe2c, 0 0 20px #abfe2c, 0 0 30px #018a36, 0 0 40px #018a36, 0 0 50px #018a36, 0 0 60px #018a36, 0 0 70px #018a36;
+    }
+    to {
+      text-shadow: 0 0 20px #abfe2c, 0 0 30px #00501e, 0 0 40px #00501e, 0 0 50px #00501e, 0 0 60px #00501e, 0 0 70px #00501e, 0 0 80px #00501e;
+    }
+  }
+  
