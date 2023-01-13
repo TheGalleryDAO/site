@@ -18,10 +18,10 @@ function between(min, max) {
       Math.random() * (max - min) + min
     )
   }
+
 async function imageAnimation(){
     let logo = $("#tgdLogo")
     counter = counter > 10 ? 0:counter + 1
-    console.log("Hello")
         const size = {
             w:logo.width(),
             h:logo.height()
@@ -34,5 +34,39 @@ setInterval(() => {
     imageAnimation()
 }, 500);
 
+// Set the date we're counting down to
+var countDownDate = new Date("Feb 23, 2023 15:37:25").getTime();
+
+// Update the count down every 1 second
+setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+  console.log("Hola Mundo")
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="counter"
+  document.getElementById("counter").innerHTML =`
+    <h1><b>${days}d ${hours}:${minutes}:${seconds}</b></h1>
+  `
+//   <div class="stack" style="--stacks: 3;">
+//   <span style="--index: 0;">${days} ${hours}:${minutes}:${seconds}</span>
+//   <span style="--index: 1;">${days} ${hours}:${minutes}:${seconds}</span>
+//   <span style="--index: 2;">${days} ${hours}:${minutes}:${seconds}</span>
+// </div>
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("counter").innerHTML = "EXPIRED";
+  }
+}, 1000);
 
 imageAnimation()

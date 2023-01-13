@@ -77,6 +77,10 @@ body{
     display: grid;
     grid-template-columns: 1fr;
   }
+  .noLink{
+    text-decoration: none;
+    color: inherit;
+  }
   
   .stack span {
     font-weight: bold;
